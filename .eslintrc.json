@@ -1,0 +1,28 @@
+{
+    "plugins": [
+        "meteor",
+        "react"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:meteor/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "meteor": true
+    },
+    "globals": {
+        "FlowRouter": false,
+        "ServiceConfiguration": false
+    }
+}
