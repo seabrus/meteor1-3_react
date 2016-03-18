@@ -1,7 +1,17 @@
+/*
 body {
     margin-top: 20px;
 }
+*/
 
 .bg-green {
     background-color: #d8f3e2; /* #ebf5d6 #e9fce9; */
+}
+
+.navbar-text-8 {
+    margin: 8px 0px;
+}
+
+.navbar-text-ui {
+    margin: 12px 0px 0px 0px;
 }

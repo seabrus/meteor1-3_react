@@ -1,6 +1,6 @@
 import React from 'react';
 
-class UserInfo extends React.Component {
+class UserLogIn extends React.Component {
     render() {
         const {user, logout, login} = this.props;
         return (
@@ -12,26 +12,26 @@ class UserInfo extends React.Component {
 
     renderGreeting(user, logout) {
         return (
-            <p>
-                Hello, {user.profile.name}.
-                <button id='logout' onClick={logout} className="btn btn-link">Logout</button>
+            <p className="navbar-text-8">
+                Hello, {user.profile.name}
+                <button type="button" id='logout' onClick={logout} className="btn btn-default">Logout</button>
             </p>
         );
     }
 
     renderLogin(login) {
         return (
-            <p>
-                <button id='login' onClick={login} className="btn btn-link">Login</button>
+            <p className="navbar-text-8">
+                <button type="button" id='login' onClick={login} className="btn btn-default">Login</button>
             </p>
         );
     }
 }
 
-UserInfo.propTypes = {
+UserLogIn.propTypes = {
     user: React.PropTypes.object,
     login: React.PropTypes.func,
     logout: React.PropTypes.func
 };
 
-export default UserInfo;
+export default UserLogIn;

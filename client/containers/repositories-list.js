@@ -4,7 +4,7 @@ import RepositoriesList from '../components/repositories-list.jsx';
 function composer(props, onData) {
     const handle = Meteor.subscribe('gitHubAccessToken');
 
-    if (handle.ready()) {
+    if (handle.ready() && Meteor.user()) {
         HTTP.get(
             'https://api.github.com/user/repos',
             {

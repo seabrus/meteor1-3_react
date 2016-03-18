@@ -1,5 +1,5 @@
 import {composeWithTracker} from 'react-komposer';
-import UserInfo from '../components/user-info.jsx';
+import UserLogIn from '../components/user-login.jsx';
 
 function login() {
     Meteor.loginWithGithub();
@@ -14,4 +14,4 @@ function composer(props, onData) {
     onData(null, {user, login, logout});
 }
 
-export default composeWithTracker(composer)(UserInfo);
+export default composeWithTracker(composer)(UserLogIn);
