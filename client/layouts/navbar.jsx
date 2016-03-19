@@ -1,25 +1,8 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meact = Meteor1.3 + React</title>
-</head>
+import React from 'react';
+import UserLogIn from '../containers/user-login';
+import AccountsUIWrapper from  '../components/accounts-ui-wrapper.jsx';
 
-<body>
-  <div id="root">
-  </div> <!-- ond of   <div id="root"> -->
-</body>
-
-
-<!--
-    <div className="container-fluid">
-        <UserInfo />
-        {Meteor.user() ? content : ''}
-    </div>
-
-
-
-
+const MainNavbar = () => (
     <nav className="navbar navbar-default">
       <div className="container">
         <div className="container-fluid">
@@ -38,9 +21,6 @@
         </div>
       </div>
     </nav>
+);
 
-
-
-
-
--->
+export default MainNavbar;

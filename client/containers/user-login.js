@@ -7,7 +7,7 @@ function login() {
 
 function logout() {
     Meteor.logout();
-
+/*
     Tracker.autorun(function (c) {
         if (! Meteor.user()) {
             if (FlowRouter.getRouteName() === 'repositories') {
@@ -19,6 +19,7 @@ function logout() {
             c.stop();
         }
     });
+*/
 }
 
 function composer(props, onData) {
