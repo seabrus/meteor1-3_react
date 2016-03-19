@@ -27,7 +27,7 @@ function b64toBlob(b64Data, contentType, sliceSize) {
 function composer(props, onData) {
     const handle = Meteor.subscribe('gitHubAccessToken');
 
-    if (handle.ready()) {
+    if (handle.ready() && Meteor.user()) {
         HTTP.get(
             `https://api.github.com/repos/${props.owner}/${props.name}/git/blobs/${props.sha}`,
             {

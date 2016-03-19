@@ -14,9 +14,9 @@ const MainLayout = ({content}) => (
                 </a>
             </div>
             <ul className="nav navbar-nav navbar-right">
-                <li> <div className="navbar-text-ui"><AccountsUIWrapper /></div> </li>
+                <li> <UserLogIn /> </li>
 {/*
-                <li> <UserLogIn /> </li>   
+                <li> <UserLogIn /> </li>
                 <li> <div className="navbar-text-ui"><AccountsUIWrapper /></div> </li>
 */}
             </ul>

@@ -7,6 +7,18 @@ function login() {
 
 function logout() {
     Meteor.logout();
+
+    Tracker.autorun(function (c) {
+        if (! Meteor.user()) {
+            if (FlowRouter.getRouteName() === 'repositories') {
+                FlowRouter.reload();
+            } 
+            else {
+                FlowRouter.go('repositories');
+            }
+            c.stop();
+        }
+    });
 }
 
 function composer(props, onData) {

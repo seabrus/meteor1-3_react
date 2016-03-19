@@ -7,7 +7,8 @@ Meteor.publish('gitHubAccessToken', function () {
                 'services.github.accessToken': 1
             }
         });
-    } else {
+    } 
+    else {
         this.ready();
     }
 });

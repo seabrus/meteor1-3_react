@@ -4,7 +4,7 @@ import BranchesList from '../components/branches-list.jsx';
 function composer(props, onData) {
     const handle = Meteor.subscribe('gitHubAccessToken');
 
-    if (handle.ready()) {
+    if (handle.ready() && Meteor.user()) {
         HTTP.get(
             `https://api.github.com/repos/${props.owner}/${props.name}/git/refs`,
             {

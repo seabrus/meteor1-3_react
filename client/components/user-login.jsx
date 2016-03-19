@@ -13,7 +13,7 @@ class UserLogIn extends React.Component {
     renderGreeting(user, logout) {
         return (
             <p className="navbar-text-8">
-                Hello, {user.profile.name}
+                {user.profile.username} &nbsp;
                 <button type="button" id='logout' onClick={logout} className="btn btn-default">Logout</button>
             </p>
         );

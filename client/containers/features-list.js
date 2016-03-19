@@ -4,7 +4,7 @@ import FeaturesList from '../components/features-list.jsx';
 function composer(props, onData) {
     const handle = Meteor.subscribe('gitHubAccessToken');
 
-    if (handle.ready()) {
+    if (handle.ready() && Meteor.user()) {
         HTTP.get(
             `https://api.github.com/repos/${props.owner}/${props.name}/git/trees/${props.sha}?recursive=1`,
             {
