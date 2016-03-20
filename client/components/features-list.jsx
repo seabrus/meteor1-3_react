@@ -5,14 +5,18 @@ const FeaturesList = ({owner, name, features}) => (
     <div>
         <a href={FlowRouter.path('repository', {owner, name})}>Back</a>
         <h3>{owner}/{name}</h3>
-        <ul>
-            {features.map(({path, sha}) => (
-                <li key={path}>
-                    <span>{path}</span>
-                    <FeaturePage owner={owner} name={name} sha={sha}/>
-                </li>
-            ))}
-        </ul>
+        <h4>Feature List</h4>
+
+        { features.length === 0 ? (<p>No features</p>) : (
+            <ul>
+                {features.map(({path, sha}) => (
+                    <li key={path}>
+                        <span>{path}</span>
+                        <FeaturePage owner={owner} name={name} sha={sha}/>
+                    </li>
+                ))}
+            </ul>
+        )}
     </div>
 );
 

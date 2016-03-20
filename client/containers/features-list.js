@@ -14,7 +14,8 @@ function composer(props, onData) {
             },
             (err, res)=> {
                 if (!err) {
-                    const features = _.filter(res.data.tree, node => /\.feature$/.test(node.path));
+                    const features = _.filter(res.data.tree, node => /^README\.md$/.test(node.path));
+//                    const features = _.filter(res.data.tree, node => /\.feature$/.test(node.path));
                     onData(null, {owner: props.owner, name: props.name, features});
                 }
             }

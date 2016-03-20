@@ -6,6 +6,7 @@ const RepositoryPage = ({repository}) => (
         <a href={FlowRouter.path('repositories')}>Back</a>
         <h3>{repository.owner.login}/{repository.name}</h3>
         <hr />
+        <h4>Branches List</h4>
         <BranchesList name={repository.name} owner={repository.owner.login} />
     </div>
 );

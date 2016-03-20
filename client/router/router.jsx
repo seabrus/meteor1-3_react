@@ -2,6 +2,7 @@ import React from 'react';
 import {mount} from 'react-mounter';
 
 import MainLayout from '../layouts/main-layout.jsx';
+import NotFound404 from '../layouts/404.jsx';
 import RepositoriesList from '../containers/repositories-list';
 import RepositoryPage from '../containers/repository-page';
 import FeaturesList from '../containers/features-list';
@@ -48,10 +49,9 @@ FlowRouter.route('/:owner/:name/:sha', {
     }
 });
 
-/*
+
 FlowRouter.notFound = {
     action: function() {
-
+        mount(NotFound404);
     }
 };
-*/

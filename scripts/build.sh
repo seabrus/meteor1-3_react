@@ -3,7 +3,7 @@ set -e
 BUNDLE_DIR=/tmp/bundle-dir
 
 npm i
-meteor build --directory $BUNDLE_DIR --server=http://localhost:3000
+meteor build --directory $BUNDLE_DIR --server=http://localhost:4000
 
 cd $BUNDLE_DIR/bundle/programs/server/
 npm i

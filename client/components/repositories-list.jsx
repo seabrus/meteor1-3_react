@@ -2,7 +2,7 @@ import React from 'react';
 
 const RepositoriesList = ({repositories}) => (
     <div>
-        This is the RepositoriesList list
+        <h3>Repositories List</h3>
         <ul>
             {repositories.map(({id, full_name, name, owner}) => (
                 <li key={id}>
