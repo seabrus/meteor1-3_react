@@ -1,17 +1,8 @@
 import React from 'react';
 
-import brace from 'brace';
-import AceEditor from 'react-ace';
-
-import 'brace/mode/gherkin';
-import 'brace/theme/github';
-
-import Parser from 'gherkin/lib/gherkin/parser';
-
-const parser = new Parser();
 
 function onChange(newValue) {
-    console.log('change',newValue);
+    console.log('change', newValue);
 
     var feature = parser.parse(newValue);
 
@@ -19,7 +10,7 @@ function onChange(newValue) {
 }
 
 const FeaturePage = ({feature}) => (
-    <AceEditor
+    <AceEditorDop
         mode="gherkin"
         theme="github"
         onChange={onChange}

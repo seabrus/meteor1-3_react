@@ -11,7 +11,7 @@ import FeaturesList from '../containers/features-list';
 FlowRouter.route('/', {
     name: 'repositories',
     action() {
-console.log('Home')
+        console.log('Home');
         mount(MainLayout, {
             content: <RepositoriesList />
         });
