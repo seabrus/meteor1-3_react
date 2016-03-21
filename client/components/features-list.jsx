@@ -7,7 +7,7 @@ const FeaturesList = ({owner, name, features}) => (
         <h3>{owner}/{name}</h3>
         <h4>Feature List</h4>
 
-        { features.length === 0 ? (<p>No features</p>) : (
+        { features.length === 0 ? (<p>No features</p>) : (   // SEE   https://facebook.github.io/react/tips/if-else-in-JSX.html
             <ul>
                 {features.map(({path, sha}) => (
                     <li key={path}>
