@@ -2,7 +2,7 @@ import React from 'react';
 import NoSSR from 'react-no-ssr';
 import FeaturePage from '../containers/feature-page';
 
-
+{/*
 const FeaturesList = ({owner, name, features}) => (
     <div>
         <a href={FlowRouter.path('repository', {owner, name})}>Back</a>
@@ -25,8 +25,8 @@ const FeaturesList = ({owner, name, features}) => (
         )}
     </div>
 );
+*/}
 
-{/*
 class FeaturesList extends React.Component {
   constructor(...args) {
     super(...args);
@@ -41,21 +41,25 @@ class FeaturesList extends React.Component {
 
   render() {
     const { canRender } = this.state;
+    //const self = this;
+    const owner = this.props.owner;
+    const name = this.props.name;
+    const features = this.props.features;
 
     return canRender ? ( 
     <div>
-        <a href={FlowRouter.path('repository', {owner, name})}>Back</a>
-        <h3>{owner}/{name}</h3>
-        <h4 style={{'color':'darkcyan', 'font-weight':'bold'}}>Feature List<br />&nbsp;</h4>
+        <a href={ FlowRouter.path('repository', { owner, name }) }>Back</a>
+        <h3>{ owner }/{ name }</h3>
+        <h4 style={{ color:'darkblue', fontWeight:'bold' }}>Feature List<br />&nbsp;</h4>
 
         { features.length === 0 ? (<p>No features</p>) : (
             <ul>
-                {features.map(({path, sha}) => (
-                    <li key={path}>
-                        <span>{path}</span>
-                            <FeaturePage owner={owner} name={name} sha={sha} />
+                { features.map(({ path, sha }) => (
+                    <li key={ path }>
+                        <span>{ path }</span>
+                            <FeaturePage owner={ owner } name={ name } sha={ sha } />
                     </li>
-                ))}
+                )) }
             </ul>
         )}
     </div>
@@ -63,7 +67,7 @@ class FeaturesList extends React.Component {
     : (<div style={{'color':'red'}}>Loading the file, please wait…</div>);
   }
 }
-*/}
+
 
 
 FeaturesList.propTypes = {
